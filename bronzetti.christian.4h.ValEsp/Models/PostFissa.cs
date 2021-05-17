@@ -14,7 +14,8 @@ namespace bronzetti.christian._4h.ValEsp.Models
             Pila stack = new Pila(); //stack
 
             List<string> strPostFissa = new List<String>();
-            string[] infissaArray = ToStringArray(espInfissa);
+            
+            string[] infissaArray =espInfissa.Split(" ");
 
             foreach (string s in infissaArray)
             {
@@ -84,36 +85,7 @@ namespace bronzetti.christian._4h.ValEsp.Models
             else
                 return false;
         }
-        static string[] ToStringArray(string str)
-        {
-            string[] retVal = new string[str.Length];
-
-            int k = 0;
-            int incrementoDoppio = 0;
-            bool f = false;
-            foreach (char c in str)
-            {
-                if (Int32.TryParse(c.ToString(), out int cifra))
-                {
-                    f = true;
-                    retVal[k] += c;
-                }
-                else
-                    f = false;
-
-                if (!f)
-                {
-                    k++;
-                    retVal[k] = c.ToString();
-                    incrementoDoppio++;
-
-                    if (incrementoDoppio > 1)
-                        k++;
-                }
-            }
-            return retVal;
-
-        }
+       
         static int CalcolaPrecendenzaOperatore(string operatore) //da 1 a 2  in ordine di importanza 1 è il più importante
         {
             //switch case o if , preferisco switch

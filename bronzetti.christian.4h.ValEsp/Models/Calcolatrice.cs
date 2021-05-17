@@ -8,7 +8,7 @@ namespace bronzetti.christian._4h.ValEsp.Models
 {
     static class Calcolatrice
     {
-            public static int Operazione(int op2, string operatore, int op1) // invertiti perchè vengono poppati
+            public static int Operazione(int op2, string operatore, int op1) 
             {
                 int ris = 0;
                 switch (operatore)

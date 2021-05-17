@@ -8,8 +8,10 @@ namespace bronzetti.christian._4h.ValEsp
     {
         static void Main(string[] args)
         {
-            //stringa infissa trasformata in postfissa, operazioni accettate: +,-,*,/ 
-            string infissa = "22/(5+6)";
+            //stringa infissa trasformata in postfissa, operazioni accettate: +,-,*, / 
+            // mettere spazio ad ogni char !
+
+            string infissa = "12 / ( 2 + 2 )";
             string[] postFissa = PostFissa.DaInfissaToPostFissas(infissa);
 
             //stampa risultato
